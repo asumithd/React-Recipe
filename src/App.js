@@ -16,9 +16,10 @@ function App() {
   };
   useEffect(() => {
     getRecipe();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query]);
 
-  
+
 
 
 
@@ -45,9 +46,9 @@ function App() {
         </button>
       </form>
       <div className='recipes'>
-      {recipes.map((recipe) => (
-        <Recipes recipe={recipe} key={recipe.recipe.label} />
-      ))}
+        {recipes.map((recipe) => (
+          <Recipes recipe={recipe} key={recipe.recipe.label} />
+        ))}
       </div>
     </div>
   );
